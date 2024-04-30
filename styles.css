@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    font-family: 'Anek Devanagari', sans-serif;
+    transition: .2s linear;
+}
+
+:root {
+    --bg-color: #001C30;
+    --text-color: #fdfdfd;
+    --main-color: #CBDDB8;
+    --blue-color: #3C5B6F;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+.header .logo h2 {
+    margin-left: 10px;
+    font-size: 1.8rem;
+    color: var(--main-color);
+}
+
+.header .logo h2 span{
+    color: var(--blue-color);
+}
+
+.header .navbar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header .navbar a {
+    margin: 0 15px;
+    font-size: 1.4rem;
+    color: var(--blue-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header .navbar a:hover {
+    color: var(--main-color); 
+}
+
