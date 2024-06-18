@@ -143,6 +143,129 @@ body {
     color: var(--blue-color);
 }
 
+/* Sección de biodiversidad */
+.biodiversidad {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 5%;
+    text-align: center;
+    background-color: var(--bg-color);
+}
+
+.biodiversidad h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+}
+
+.biodiversidad p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.biodiversidad .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.biodiversidad .left-column,
+.biodiversidad .right-column {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem); 
+    margin-bottom: 1.5rem;
+}
+
+.biodiversidad .left-column .details,
+.biodiversidad .right-column .details {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.biodiversidad .left-column .details h3,
+.biodiversidad .right-column .details h3 {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.biodiversidad .left-column .details p,
+.biodiversidad .right-column .details p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.biodiversidad .image-container {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.biodiversidad img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Acordeón */
+.accordion-section {
+    margin-top: 2rem;
+}
+
+.accordion-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    background-color: var(--blue-color);
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    outline: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.accordion-button:hover {
+    background-color: var(--main-color);
+}
+
+.accordion-button.active {
+    background-color: var(--main-color);
+}
+
+.accordion-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-button.active .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    display: none;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.accordion-button.active + .accordion-content {
+    display: block;
+}
+
 /* Secciones de Cundinamarca y Boyacá */
 .region {
     min-height: 100vh;
@@ -559,6 +682,17 @@ textarea {
         padding: 1rem;
         max-width: 100%;
     }
+
+    .biodiversidad .info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .biodiversidad .left-column,
+    .biodiversidad .right-column {
+        flex: 1 1 100%; 
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -614,5 +748,19 @@ textarea {
 
     .btn-submit {
         font-size: 0.8rem;
+    }
+
+    .biodiversidad h2 {
+        font-size: 2rem;
+    }
+
+    .biodiversidad .left-column .details h3,
+    .biodiversidad .right-column .details h3 {
+        font-size: 1.3rem;
+    }
+
+    .biodiversidad .left-column .details p,
+    .biodiversidad .right-column .details p {
+        font-size: 1rem;
     }
 }
