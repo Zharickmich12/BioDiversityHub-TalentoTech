@@ -107,8 +107,7 @@ body {
 }
 
 .home img {
-    animation: shake 10s ease-in-out;
-    animation-iteration-count: 10;
+    animation: shake 10s ease-in-out infinite;
 }
 
 .home h1 {
@@ -420,3 +419,200 @@ textarea {
     color: var(--blue-color);
 }
 
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 1024px) {
+    .header .logo h2 {
+        font-size: 1.3rem;
+    }
+    
+    .header .navbar a {
+        margin: 0 8px;
+        font-size: 1rem;
+    }
+    
+    .home h1 {
+        font-size: 2rem;
+    }
+    
+    .home p {
+        font-size: 1rem;
+    }
+    
+    .region h2 {
+        font-size: 1.8rem;
+    }
+    
+    .region .details h3 {
+        font-size: 1.3rem;
+    }
+    
+    .region .details p {
+        font-size: 1rem;
+    }
+    
+    .resource h3 {
+        font-size: 1.3rem;
+    }
+    
+    .resource p {
+        font-size: 1rem;
+    }
+    
+    .contact h2 {
+        font-size: 1.8rem;
+    }
+    
+    label {
+        font-size: 0.9rem;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 0.9rem;
+    }
+    
+    .btn-submit {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 1.5rem 5%;
+    }
+
+    .header .logo h2 {
+        font-size: 1.2rem;
+    }
+
+    .header .navbar {
+        display: none; 
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-color);
+        z-index: 999;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .header .navbar.active {
+        transform: translateY(0);
+    }
+
+    .header .navbar a {
+        margin: 10px 0;
+        font-size: 1.2rem;
+    }
+
+    .home {
+        padding: 1rem 5%;
+    }
+
+    .home img {
+        max-width: 50%;
+        margin-bottom: 1rem;
+    }
+
+    .home h1 {
+        font-size: 2rem;
+    }
+
+    .home p {
+        font-size: 0.9rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .region .info {
+        width: 100%;
+    }
+
+    .resource {
+        flex: 1 1 100%;
+    }
+
+    .contact {
+        padding: 1rem 5%;
+    }
+
+    #contact-form {
+        padding: 1rem;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header .logo h2 {
+        font-size: 1rem;
+    }
+
+    .header .navbar a {
+        font-size: 1rem;
+    }
+
+    .home h1 {
+        font-size: 1.5rem;
+    }
+
+    .home p {
+        font-size: 0.8rem;
+    }
+
+    .region h2 {
+        font-size: 1.5rem;
+    }
+
+    .region .details h3 {
+        font-size: 1.2rem;
+    }
+
+    .region .details p {
+        font-size: 0.9rem;
+    }
+
+    .resource h3 {
+        font-size: 1.2rem;
+    }
+
+    .resource p {
+        font-size: 0.9rem;
+    }
+
+    .contact h2 {
+        font-size: 1.5rem;
+    }
+
+    label {
+        font-size: 0.8rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 0.8rem;
+    }
+
+    .btn-submit {
+        font-size: 0.8rem;
+    }
+}
